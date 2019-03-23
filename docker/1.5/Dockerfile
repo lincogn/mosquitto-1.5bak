@@ -80,6 +80,9 @@ RUN set -x && \
     apk del build-deps && \
     rm -rf /build
 
+EXPOSE 1883
+EXPOSE 9001
+
 VOLUME ["/mosquitto/data", "/mosquitto/log"]
 
 # Set up the entry point script and default command
